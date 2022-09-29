@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITE002 - P1</title>
+    
+    <!-- Estilização -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <main>
+        <h1>Máquinas de vendas</h1>
+        <div class="view">
+            <div class="col-one-of-three">
+                <h2>Produtos</h2>
+                <div class="produto-item">
+                    <p>1</p>
+                    <img src="./img/produto-1.png" alt="Foto do produto 1">
+                    <p><strong>R$ 1.50</strong> - <span id="estoque-produto-1"></span> em estoque</p>
+                </div>
+                <div class="produto-item">
+                    <p>2</p>
+                    <img src="./img/produto-2.png" alt="Foto do produto 2">
+                    <p><strong>R$ 1.50</strong> - <span id="estoque-produto-2"></span> em estoque</p>
+                </div>
+                <div class="produto-item">
+                    <p>3</p>
+                    <img src="./img/produto-3.png" alt="Foto do produto 3">
+                    <p><strong>R$ 1.50</strong> - <span id="estoque-produto-3"></span> em estoque</p>
+                </div>
+                <div class="produto-item">
+                    <p>4</p>
+                    <img src="./img/produto-4.png" alt="Foto do produto 4">
+                    <p><strong>R$ 1.50</strong> - <span id="estoque-produto-4"></span> em estoque</p>
+                </div>
+            </div>
+            <div class="col-two-of-three">
+                <h2>Produto selecionado</h2>
+                <button onclick="selecionaProdutoDown()"><img src="./img/arrow.svg" alt="" class="arrow-up"></button>
+                <div class="card">
+                    <p id="numero-produto" onloadstart="exibeNumeroProduto()"></p>
+                </div>
+                <button onclick="selecionaProdutoUp()" class="arrow-down"><img src="./img/arrow.svg" alt=""></button>
+                <button onclick="comprarProdutoSelecionado()" class="btn-blue-transparent">Comprar</button>
+            </div>
+            <div class="col-three-of-three">
+                <h2>Saldo</h2>
+                <p>R$ <span id="saldo"></span></p>
+                <h4>Depositar</h4>
+                <table>
+                    <tr>
+                        <td onclick="digitarSaldo(1)">1</td>
+                        <td onclick="digitarSaldo(2)">2</td>
+                        <td onclick="digitarSaldo(3)">3</td>
+                    </tr>
+                    <tr>
+                        <td onclick="digitarSaldo(4)">4</td>
+                        <td onclick="digitarSaldo(5)">5</td>
+                        <td onclick="digitarSaldo(6)">6</td>
+                    </tr>
+                    <tr>
+                        <td onclick="digitarSaldo(7)">7</td>
+                        <td onclick="digitarSaldo(8)">8</td>
+                        <td onclick="digitarSaldo(9)">9</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" onclick="digitarSaldo(0)">0</td>
+                    </tr>
+                </table>
+                <div class="actions">
+                    <button class="btn-red" onclick="apagarValorDigitado()">X</button>
+                    <button class="btn-blue-transparent" onclick="confirmarSaldo()">Confirmar</button>
+                </div>
+                <button class="btn-blue" onclick="retirarDinheiro()">Retirar em dinheiro</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Javascript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+:root{
+    --dark-gray: #1E1E1E;
+    --dark-blue: #0067B3;
+
+    --medium-gray: #282828;
+    --medium-red: #FF3D60;
+    --medium-green: #00B39E;
+    --medium-yellow: #FFD53D;
+    --medium-white: #F8F8F8;
+    
+    --light-gray: #606060;
+    --light-white: #FFFFFF;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background: var(--dark-gray);
+    color: var(--medium-white);
+}
+
+.view,
+.produto-item{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.25rem;
+}
+
+.view{
+    margin-top: 4rem;
+}
+
+.col-one-of-three,
+.col-two-of-three,
+.col-three-of-three{
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center;
+}
+
+.produto-item img{
+    width: 60px;
+    height: 60px;
+    margin: 0 1rem;
+}
+table tr td{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: var(--light-gray);
+    text-align: center;
+}
+
+.actions{
+    margin: 1rem;
+
+}
+
+button{
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-blue-transparent{
+    border: 2px solid var(--dark-blue);
+    color: var(--medium-white);
+}
+.btn-red{
+    border: 1px solid var(--medium-red);
+    color: var(--medium-white);
+}
+.btn-blue{
+    background: var(--dark-blue);
+    color: var(--medium-white);
+
+}
+
+img.arrow-up{
+    transform: rotate(180deg);
+}
+
+.card{
+    background: var(--light-white);
+    color: var(--dark-gray);
+    padding: 1rem;
+    width: 5rem;
+    text-align: center;
+    border-radius: 0.55rem;
+}
